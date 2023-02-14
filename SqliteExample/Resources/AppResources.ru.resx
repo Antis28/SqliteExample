@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutTab" xml:space="preserve">
+    <value>О авторе</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>Информация об авторе</value>
+  </data>
+  <data name="AddNote" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Удалить</value>
+  </data>
+  <data name="NotesTab" xml:space="preserve">
+    <value>Заметки</value>
+  </data>
+  <data name="PlaceHolderAddNote" xml:space="preserve">
+    <value>Текст заметки</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Сохранить</value>

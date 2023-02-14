@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Margin="20">
-                <Editor Placeholder="Note text"
+                <Editor Placeholder="{x:Static resources:AppResources.PlaceHolderAddNote}"
                         Text="{Binding Text}"
                         HeightRequest="100"/>
                 <Grid ColumnDefinitions="*,*">

@@ -61,11 +61,56 @@ namespace SqliteExample.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на About.
+        /// </summary>
+        public static string AboutTab {
+            get {
+                return ResourceManager.GetString("AboutTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на About Text.
+        /// </summary>
+        public static string AboutText {
+            get {
+                return ResourceManager.GetString("AboutText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Add Note.
+        /// </summary>
+        public static string AddNote {
+            get {
+                return ResourceManager.GetString("AddNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Delete.
         /// </summary>
         public static string Delete {
             get {
                 return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Notes.
+        /// </summary>
+        public static string NotesTab {
+            get {
+                return ResourceManager.GetString("NotesTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Note text.
+        /// </summary>
+        public static string PlaceHolderAddNote {
+            get {
+                return ResourceManager.GetString("PlaceHolderAddNote", resourceCulture);
             }
         }
         

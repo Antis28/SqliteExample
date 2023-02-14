@@ -2,17 +2,18 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteExample.AppShell"
-       xmlns:views="clr-namespace:SqliteExample.Views">
+       xmlns:views="clr-namespace:SqliteExample.Views"
+       xmlns:resources="clr-namespace:SqliteExample.Resources">
     <TabBar>
         <ShellContent
-            Title="Notes"
+            Title="{x:Static resources:AppResources.NotesTab}"
             Icon="icon_feed.png"
             ContentTemplate="{DataTemplate views:NotesPage}">
             
         </ShellContent>
         
         <ShellContent
-            Title="About"
+            Title="{x:Static resources:AppResources.AboutTab}"
             Icon="icon_about.png"
             ContentTemplate="{DataTemplate views:AboutPage}">
             
