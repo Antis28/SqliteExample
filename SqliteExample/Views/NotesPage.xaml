@@ -15,17 +15,22 @@
         Margin="20"
         SelectionMode="Single"
         SelectionChanged="OnSelectionChanged">
-        <CollectionView.ItemsLayout>
+        <CollectionView.ItemsLayout >
             <LinearItemsLayout Orientation="Vertical"
-                               ItemSpacing="10">                
+                               ItemSpacing="10"
+                               >                
             </LinearItemsLayout>
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout>
+                <StackLayout
+                    BackgroundColor="AliceBlue"
+                    >
                     <Label Text="{Binding Text}"
                            TextColor="Black"
-                           FontSize="Medium"/>
+                           FontSize="Medium"
+                           
+                           />
                     <Label Text="{Binding MeasurementType}"
                            TextColor="Coral"
                            FontSize="Small"/>

@@ -4,6 +4,7 @@ using SqliteExample.Resources;
 using SqliteExample.Types;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,21 +16,35 @@ namespace SqliteExample.Views
         public string ItemId {set { LoadNote(value); } }
 
 
-        public NoteAddingPage()
+        public  NoteAddingPage()
         {
+
+            FocusEditor();
             InitializeComponent();
             BindingContext = new Note();
 
-           // FillPickerMeasurement();
+            FillPickerMeasurement();
             
+        }
+
+        private async void FocusEditor()
+        {
+            await Task.Run(async () =>
+            {
+                await Task.Delay(100);
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    MeasuremenValue.Focus();
+                });
+            });
         }
 
         private void FillPickerMeasurement()
         {
             var measurementList = new List<string>();
-            measurementList.Add(new ElectricityMeasurement().NameMeasure);
-            measurementList.Add(new WaterMeasurement().NameMeasure);
-            measurementList.Add(new GasMeasurement().NameMeasure);
+            measurementList.Add(new ElectricityMeasurement());
+            measurementList.Add(new WaterMeasurement());
+            measurementList.Add(new GasMeasurement());
 
             PickerMeasurement.ItemsSource = measurementList;
             PickerMeasurement.SelectedIndex = 0;
@@ -38,7 +53,8 @@ namespace SqliteExample.Views
         private async void OnSaveButton_Clicked(object sender, System.EventArgs e)
         {
             var note = BindingContext as Note;
-            note.Date = DatePickerMeasurement.Date;
+            var nowDateTime = DateTime.Now;
+            note.Date = DatePickerMeasurement.Date.AddHours(nowDateTime.Hour).AddMinutes(nowDateTime.Minute);
 
             // Выбираем тип измерения
             switch (PickerMeasurement.SelectedIndex)
@@ -54,6 +70,10 @@ namespace SqliteExample.Views
             if (!string.IsNullOrWhiteSpace(note.Text))
             {
                 await App.NotesDB.SaveNoteAsync(note);
+            }
+            else
+            {
+                
             }
             await Shell.Current.GoToAsync("..");
         }

@@ -1,15 +1,12 @@
-﻿using SqliteExample.Resources;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SqliteExample.Types
+﻿namespace SqliteExample.Types
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    internal class MeasurementType
+    public class MeasurementType
     {
-        
+        public virtual string NameMeasure { get; }
+        public override string ToString()
+        {
+            return NameMeasure;
+        }
+        public static implicit operator string(MeasurementType d) => d.NameMeasure;
     }
 }

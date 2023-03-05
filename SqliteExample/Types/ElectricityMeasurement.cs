@@ -5,8 +5,8 @@ using System.Text;
 
 namespace SqliteExample.Types
 {
-    internal class ElectricityMeasurement : IMeasurement
+    internal class ElectricityMeasurement : MeasurementType
     {
-        public string NameMeasure { get => AppResources.MeasurementElectricity; }
+        public override string NameMeasure { get => AppResources.MeasurementElectricity; }
     }
 }

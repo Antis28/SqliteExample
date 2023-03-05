@@ -10,6 +10,6 @@ namespace SqliteExample.Models
         public int Id { get; set; }
         public string Text { get; set; }
         public DateTime Date { get; set; }
-        public IMeasurement Measurement { get; set; }
+        public string Measurement { get; set; }
     }
 }

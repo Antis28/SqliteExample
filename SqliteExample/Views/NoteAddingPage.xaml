@@ -14,12 +14,12 @@
                         
                         HeightRequest="50"/>
 
-                <Picker x:Name="PickerMeasurement" Title="{x:Static resources:AppResources.MeasurementTitle}" SelectedIndex="{Binding Measurement}">                                    
+                <Picker x:Name="PickerMeasurement" Title="{x:Static resources:AppResources.MeasurementTitle}" SelectedItem="{Binding Measurement}">                                    
                 </Picker>
                 <Label x:Name="label" Text="Выберите дату" FontSize="Medium" />
                 <DatePicker x:Name="DatePickerMeasurement" Format="D" DateSelected="datePicker_DateSelected">
-                    <DatePicker.MinimumDate>6/01/2015</DatePicker.MinimumDate>
-                    <DatePicker.MaximumDate>6/30/2050</DatePicker.MaximumDate>
+                    <DatePicker.MinimumDate>1/01/2015</DatePicker.MinimumDate>
+                    
                 </DatePicker>
                 <Grid ColumnDefinitions="*,*">
                     <Button Text="{x:Static resources:AppResources.Save}"
