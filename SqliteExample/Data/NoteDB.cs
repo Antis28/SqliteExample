@@ -17,6 +17,10 @@ namespace SqliteExample.Data
         {
             return db.Table<Note>().OrderBy((x)=> x.Date).ToListAsync();
         }
+        public Task<List<Note>> GetNotesSelectElectroAsync()
+        {
+            return db.Table<Note>().OrderBy((x) => x.Date).ToListAsync();
+        }
         public Task<Note> GetNoteAsync(int id)
         {
             return db.Table<Note>().

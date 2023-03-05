@@ -61,15 +61,6 @@ namespace SqliteExample.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на About.
-        /// </summary>
-        public static string AboutTab {
-            get {
-                return ResourceManager.GetString("AboutTab", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на About Text.
         /// </summary>
         public static string AboutText {
@@ -133,15 +124,6 @@ namespace SqliteExample.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Notes.
-        /// </summary>
-        public static string NotesTab {
-            get {
-                return ResourceManager.GetString("NotesTab", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на Note text.
         /// </summary>
         public static string PlaceHolderAddNote {
@@ -165,6 +147,51 @@ namespace SqliteExample.Resources {
         public static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на About.
+        /// </summary>
+        public static string TabAbout {
+            get {
+                return ResourceManager.GetString("TabAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Electricity.
+        /// </summary>
+        public static string TabElectricity {
+            get {
+                return ResourceManager.GetString("TabElectricity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Gas.
+        /// </summary>
+        public static string TabGas {
+            get {
+                return ResourceManager.GetString("TabGas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Notes.
+        /// </summary>
+        public static string TabNotes {
+            get {
+                return ResourceManager.GetString("TabNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Water.
+        /// </summary>
+        public static string TabWater {
+            get {
+                return ResourceManager.GetString("TabWater", resourceCulture);
             }
         }
     }

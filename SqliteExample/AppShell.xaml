@@ -6,14 +6,32 @@
        xmlns:resources="clr-namespace:SqliteExample.Resources">
     <TabBar>
         <ShellContent
-            Title="{x:Static resources:AppResources.NotesTab}"
+            Title="{x:Static resources:AppResources.TabNotes}"
             Icon="icon_feed.png"
             ContentTemplate="{DataTemplate views:NotesPage}">
             
         </ShellContent>
-        
         <ShellContent
-            Title="{x:Static resources:AppResources.AboutTab}"
+            Title="{x:Static resources:AppResources.TabElectricity}"
+            Icon="icon_feed.png"
+            ContentTemplate="{DataTemplate views:ElectricityPage}">
+
+        </ShellContent>
+        <ShellContent
+            Title="{x:Static resources:AppResources.TabWater}"
+            Icon="icon_feed.png"
+            ContentTemplate="{DataTemplate views:NotesPage}">
+
+        </ShellContent>
+        <ShellContent
+            Title="{x:Static resources:AppResources.TabGas}"
+            Icon="icon_feed.png"
+            ContentTemplate="{DataTemplate views:NotesPage}">
+
+        </ShellContent>
+
+        <ShellContent
+            Title="{x:Static resources:AppResources.TabAbout}"
             Icon="icon_about.png"
             ContentTemplate="{DataTemplate views:AboutPage}">
             
