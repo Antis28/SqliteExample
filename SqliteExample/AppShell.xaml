@@ -11,25 +11,7 @@
             ContentTemplate="{DataTemplate views:NotesPage}">
             
         </ShellContent>
-        <ShellContent
-            Title="{x:Static resources:AppResources.TabElectricity}"
-            Icon="icon_feed.png"
-            ContentTemplate="{DataTemplate views:ElectricityPage}">
-
-        </ShellContent>
-        <ShellContent
-            Title="{x:Static resources:AppResources.TabWater}"
-            Icon="icon_feed.png"
-            ContentTemplate="{DataTemplate views:NotesPage}">
-
-        </ShellContent>
-        <ShellContent
-            Title="{x:Static resources:AppResources.TabGas}"
-            Icon="icon_feed.png"
-            ContentTemplate="{DataTemplate views:NotesPage}">
-
-        </ShellContent>
-
+        
         <ShellContent
             Title="{x:Static resources:AppResources.TabAbout}"
             Icon="icon_about.png"

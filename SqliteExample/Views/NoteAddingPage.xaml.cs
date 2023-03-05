@@ -18,13 +18,12 @@ namespace SqliteExample.Views
 
         public  NoteAddingPage()
         {
-
             FocusEditor();
             InitializeComponent();
             BindingContext = new Note();
 
             FillPickerMeasurement();
-            
+            DatePickerMeasurement.Date = DateTime.Now;
         }
 
         private async void FocusEditor()
@@ -47,7 +46,7 @@ namespace SqliteExample.Views
             measurementList.Add(new GasMeasurement());
 
             PickerMeasurement.ItemsSource = measurementList;
-            PickerMeasurement.SelectedIndex = 0;
+            PickerMeasurement.SelectedIndex = 0;            
         }
 
         private async void OnSaveButton_Clicked(object sender, System.EventArgs e)
@@ -73,7 +72,7 @@ namespace SqliteExample.Views
             }
             else
             {
-                DisplayAlert("Уведомление", "Не могу сохранить!\nНе указано значение для показания счетчика", "ОK");
+               await DisplayAlert("Уведомление", "Не могу сохранить!\nНе указано значение для показания счетчика", "ОK");
             }
             await Shell.Current.GoToAsync("..");
         }
@@ -100,8 +99,8 @@ namespace SqliteExample.Views
 
         private void datePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
-            if (label != null)
-                label.Text = "Вы выбрали " + e.NewDate.ToString("dd/MM/yyyy");
+            //if (label != null)
+            //    label.Text = "Вы выбрали " + e.NewDate.ToString("dd/MM/yyyy");
         }
     }
 }

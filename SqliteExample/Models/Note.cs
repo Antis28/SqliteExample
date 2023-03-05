@@ -11,5 +11,7 @@ namespace SqliteExample.Models
         public string Text { get; set; }
         public DateTime Date { get; set; }
         public string Measurement { get; set; }
+        // Расход
+        public int Expenditure { get; set; }
     }
 }

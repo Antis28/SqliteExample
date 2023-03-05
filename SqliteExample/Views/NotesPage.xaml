@@ -3,8 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteExample.Views.NotesPage"
              
-             xmlns:resources="clr-namespace:SqliteExample.Resources">
+             xmlns:resources="clr-namespace:SqliteExample.Resources" Visual="Material">
     <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="{x:Static resources:AppResources.TabElectricity}"
+            Clicked="SortByElectricityButton_Clicked" 
+            
+            />
+        <ToolbarItem
+            Text="{x:Static resources:AppResources.TabWater}"
+            Clicked="SortByWaterButton_Clicked"
+            />
+        <ToolbarItem
+            Text="{x:Static resources:AppResources.TabGas}"
+            Clicked="SortByGasButton_Clicked"
+            />
         <ToolbarItem
             Text="{x:Static resources:AppResources.AddNote}"
             Clicked="AddButton_Clicked"
@@ -26,17 +39,45 @@
                 <StackLayout
                     BackgroundColor="AliceBlue"
                     >
-                    <Label Text="{Binding Text}"
-                           TextColor="Black"
-                           FontSize="Medium"
-                           
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Показания: "
+                           TextColor="Silver"
+                           FontSize="Medium"                           
                            />
-                    <Label Text="{Binding Measurement}"
+                        <Label Text="{Binding Text}"
+                           TextColor="Black"
+                           FontSize="Medium"                           
+                           />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Расход: "
+                           TextColor="Silver"
+                           FontSize="Medium"                           
+                           />
+                        <Label
+                           Text="{Binding Expenditure}"
                            TextColor="Black"
                            FontSize="Small"/>
-                    <Label Text="{Binding Date}"
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Вид измерения: "
+                           TextColor="Silver"
+                           FontSize="Medium"                           
+                           />
+                        <Label Text="{Binding Measurement}"
+                           TextColor="CornflowerBlue"
+                           FontSize="Small"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Дата измерения: "
+                           TextColor="Silver"
+                           FontSize="Medium"                           
+                           />
+                        <Label Text="{Binding Date}"
                            TextColor="Silver"
                            FontSize="Small"/>
+                    </StackLayout>
+                        
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

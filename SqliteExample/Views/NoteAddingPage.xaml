@@ -7,19 +7,30 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Margin="20">
-                <Entry x:Name="MeasuremenValue" Placeholder="{x:Static resources:AppResources.PlaceHolderMeasuremen}"
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Показания: "
+                           TextColor="Silver"
+                           FontSize="Medium"                           
+                           />
+                    <Entry x:Name="MeasuremenValue" Placeholder="{x:Static resources:AppResources.PlaceHolderMeasuremen}"
                         Text="{Binding Text}"
                         Keyboard="Numeric"
                         MaxLength="6"
                         HeightRequest="50"/>
-
-                <Picker x:Name="PickerMeasurement" 
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Вид измерения: "
+                           TextColor="Silver"
+                           FontSize="Medium"                           
+                           />
+                    <Picker x:Name="PickerMeasurement" 
                         Title="{x:Static resources:AppResources.MeasurementTitle}" 
                         SelectedItem="{Binding Measurement}">
-                    
-                </Picker>
+
+                    </Picker>
+                </StackLayout>
                 <Label x:Name="label" Text="Выберите дату" FontSize="Medium" />
-                <DatePicker x:Name="DatePickerMeasurement" Format="D" DateSelected="datePicker_DateSelected">
+                <DatePicker x:Name="DatePickerMeasurement" Format="D" DateSelected="datePicker_DateSelected" Date="{Binding Date}">
                     <DatePicker.MinimumDate>1/01/2015</DatePicker.MinimumDate>
                     
                 </DatePicker>
