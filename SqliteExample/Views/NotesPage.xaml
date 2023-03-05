@@ -26,6 +26,9 @@
                     <Label Text="{Binding Text}"
                            TextColor="Black"
                            FontSize="Medium"/>
+                    <Label Text="{Binding MeasurementType}"
+                           TextColor="Coral"
+                           FontSize="Small"/>
                     <Label Text="{Binding Date}"
                            TextColor="Silver"
                            FontSize="Small"/>

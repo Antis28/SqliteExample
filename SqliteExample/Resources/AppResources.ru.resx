@@ -129,11 +129,26 @@
   <data name="Delete" xml:space="preserve">
     <value>Удалить</value>
   </data>
+  <data name="MeasurementElectricity" xml:space="preserve">
+    <value>Электричество</value>
+  </data>
+  <data name="MeasurementGas" xml:space="preserve">
+    <value>Газ</value>
+  </data>
+  <data name="MeasurementTitle" xml:space="preserve">
+    <value>Тип измерения</value>
+  </data>
+  <data name="MeasurementWater" xml:space="preserve">
+    <value>Вода</value>
+  </data>
   <data name="NotesTab" xml:space="preserve">
     <value>Заметки</value>
   </data>
   <data name="PlaceHolderAddNote" xml:space="preserve">
     <value>Текст заметки</value>
+  </data>
+  <data name="PlaceHolderMeasuremen" xml:space="preserve">
+    <value>Показания счетчика</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Сохранить</value>

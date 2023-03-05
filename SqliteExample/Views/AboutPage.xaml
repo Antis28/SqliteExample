@@ -5,9 +5,15 @@
              xmlns:resources="clr-namespace:SqliteExample.Resources">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{x:Static resources:AppResources.AboutText}"
+            <Label
+                x:Name="label"
+                Text="{x:Static resources:AppResources.AboutText}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="Test_1"
+                    Text="Test_1"/>
+            <Button x:Name="Test_2"
+                    Text="Test_2"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

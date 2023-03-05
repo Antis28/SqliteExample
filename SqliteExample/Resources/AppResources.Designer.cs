@@ -97,6 +97,42 @@ namespace SqliteExample.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Electricity.
+        /// </summary>
+        public static string MeasurementElectricity {
+            get {
+                return ResourceManager.GetString("MeasurementElectricity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Gas.
+        /// </summary>
+        public static string MeasurementGas {
+            get {
+                return ResourceManager.GetString("MeasurementGas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Measurement Type.
+        /// </summary>
+        public static string MeasurementTitle {
+            get {
+                return ResourceManager.GetString("MeasurementTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Water.
+        /// </summary>
+        public static string MeasurementWater {
+            get {
+                return ResourceManager.GetString("MeasurementWater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Notes.
         /// </summary>
         public static string NotesTab {
@@ -111,6 +147,15 @@ namespace SqliteExample.Resources {
         public static string PlaceHolderAddNote {
             get {
                 return ResourceManager.GetString("PlaceHolderAddNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Measuremen.
+        /// </summary>
+        public static string PlaceHolderMeasuremen {
+            get {
+                return ResourceManager.GetString("PlaceHolderMeasuremen", resourceCulture);
             }
         }
         

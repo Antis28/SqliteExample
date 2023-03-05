@@ -129,11 +129,26 @@
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="MeasurementElectricity" xml:space="preserve">
+    <value>Electricity</value>
+  </data>
+  <data name="MeasurementGas" xml:space="preserve">
+    <value>Gas</value>
+  </data>
+  <data name="MeasurementTitle" xml:space="preserve">
+    <value>Measurement Type</value>
+  </data>
+  <data name="MeasurementWater" xml:space="preserve">
+    <value>Water</value>
+  </data>
   <data name="NotesTab" xml:space="preserve">
     <value>Notes</value>
   </data>
   <data name="PlaceHolderAddNote" xml:space="preserve">
     <value>Note text</value>
+  </data>
+  <data name="PlaceHolderMeasuremen" xml:space="preserve">
+    <value>Measuremen</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>

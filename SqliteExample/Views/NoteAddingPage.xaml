@@ -6,9 +6,21 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Margin="20">
-                <Editor Placeholder="{x:Static resources:AppResources.PlaceHolderAddNote}"
+                <Entry Text="ter">
+                    
+                </Entry>
+                <Editor x:Name="MeasuremenValue" Placeholder="{x:Static resources:AppResources.PlaceHolderMeasuremen}"
                         Text="{Binding Text}"
-                        HeightRequest="100"/>
+                        
+                        HeightRequest="50"/>
+
+                <Picker x:Name="PickerMeasurement" Title="{x:Static resources:AppResources.MeasurementTitle}" SelectedIndex="{Binding Measurement}">                                    
+                </Picker>
+                <Label x:Name="label" Text="Выберите дату" FontSize="Medium" />
+                <DatePicker x:Name="DatePickerMeasurement" Format="D" DateSelected="datePicker_DateSelected">
+                    <DatePicker.MinimumDate>6/01/2015</DatePicker.MinimumDate>
+                    <DatePicker.MaximumDate>6/30/2050</DatePicker.MaximumDate>
+                </DatePicker>
                 <Grid ColumnDefinitions="*,*">
                     <Button Text="{x:Static resources:AppResources.Save}"
                             Clicked="OnSaveButton_Clicked"/>
