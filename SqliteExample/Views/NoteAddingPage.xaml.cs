@@ -73,7 +73,7 @@ namespace SqliteExample.Views
             }
             else
             {
-                
+                DisplayAlert("Уведомление", "Не могу сохранить!\nНе указано значение для показания счетчика", "ОK");
             }
             await Shell.Current.GoToAsync("..");
         }

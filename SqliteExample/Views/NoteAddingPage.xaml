@@ -1,20 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:n="SqliteExample.Types"
              x:Class="SqliteExample.Views.NoteAddingPage"
              xmlns:resources="clr-namespace:SqliteExample.Resources">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Margin="20">
-                <Entry Text="ter">
-                    
-                </Entry>
-                <Editor x:Name="MeasuremenValue" Placeholder="{x:Static resources:AppResources.PlaceHolderMeasuremen}"
+                <Entry x:Name="MeasuremenValue" Placeholder="{x:Static resources:AppResources.PlaceHolderMeasuremen}"
                         Text="{Binding Text}"
-                        
+                        Keyboard="Numeric"
+                        MaxLength="6"
                         HeightRequest="50"/>
 
-                <Picker x:Name="PickerMeasurement" Title="{x:Static resources:AppResources.MeasurementTitle}" SelectedItem="{Binding Measurement}">                                    
+                <Picker x:Name="PickerMeasurement" 
+                        Title="{x:Static resources:AppResources.MeasurementTitle}" 
+                        SelectedItem="{Binding Measurement}">
+                    
                 </Picker>
                 <Label x:Name="label" Text="Выберите дату" FontSize="Medium" />
                 <DatePicker x:Name="DatePickerMeasurement" Format="D" DateSelected="datePicker_DateSelected">
