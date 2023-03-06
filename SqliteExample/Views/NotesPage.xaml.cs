@@ -9,11 +9,13 @@ using System.Collections.Generic;
 
 namespace SqliteExample.Views
 {
-
+    [QueryProperty(nameof(ShowedMeasurement), nameof(ShowedMeasurement))]
     public partial class NotesPage : ContentPage
     {
         List<Note> notes;
-        MeasurementType measurementType;
+
+        public string ShowedMeasurement { set; get; }
+
         public NotesPage()
         {
             InitializeComponent();
@@ -24,9 +26,9 @@ namespace SqliteExample.Views
 
             notes = await myTask;
 
-            if(measurementType == null)
-                measurementType = new ElectricityMeasurement();
-            SortDataByAsync(measurementType);
+            if(string.IsNullOrEmpty(ShowedMeasurement))
+                ShowedMeasurement = new ElectricityMeasurement();
+            SortDataByAsync(ShowedMeasurement);
 
             base.OnAppearing();
         }
@@ -48,8 +50,8 @@ namespace SqliteExample.Views
 
         private void SortByElectricityButton_Clicked(object sender, System.EventArgs e)
         {
-            measurementType = new ElectricityMeasurement();
-            SortDataByAsync(measurementType);
+            ShowedMeasurement = new ElectricityMeasurement();
+            SortDataByAsync(ShowedMeasurement);
         }
 
         private void SortDataByAsync(MeasurementType type)
@@ -73,14 +75,14 @@ namespace SqliteExample.Views
 
         private void SortByWaterButton_Clicked(object sender, System.EventArgs e)
         {
-            measurementType = new WaterMeasurement();
-            SortDataByAsync(measurementType);
+            ShowedMeasurement = new WaterMeasurement();
+            SortDataByAsync(ShowedMeasurement);
         }
 
         private void SortByGasButton_Clicked(object sender, System.EventArgs e)
         {
-            measurementType = new GasMeasurement();
-            SortDataByAsync(measurementType);
+            ShowedMeasurement = new GasMeasurement();
+            SortDataByAsync(ShowedMeasurement);
         }
     }
 }

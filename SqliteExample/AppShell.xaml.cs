@@ -10,6 +10,7 @@ namespace SqliteExample
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(NoteAddingPage), typeof(NoteAddingPage));
+            Routing.RegisterRoute(nameof(NotesPage), typeof(NotesPage));
         }
     }
 }

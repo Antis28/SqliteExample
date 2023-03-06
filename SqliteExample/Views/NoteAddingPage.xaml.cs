@@ -63,7 +63,6 @@ namespace SqliteExample.Views
                 case 2: note.Measurement = new GasMeasurement(); break;
                 default:
                     throw new Exception("Не могу определить тип измерения");
-                    break;
             }
 
             if (!string.IsNullOrWhiteSpace(note.Text))
@@ -74,7 +73,8 @@ namespace SqliteExample.Views
             {
                await DisplayAlert("Уведомление", "Не могу сохранить!\nНе указано значение для показания счетчика", "ОK");
             }
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync(
+                    $"{nameof(NotesPage)}?{nameof(NotesPage.ShowedMeasurement)}={note.Measurement}");
         }
 
         private async void OnDeleteButton_Clicked(object sender, System.EventArgs e)
