@@ -13,6 +13,7 @@ namespace SqliteExample.Views
     public partial class NotesPage : ContentPage
     {
         List<Note> notes;
+        MeasurementType measurementType;
         public NotesPage()
         {
             InitializeComponent();
@@ -22,7 +23,10 @@ namespace SqliteExample.Views
             var myTask = App.NotesDB.GetNotesAsync();
 
             notes = await myTask;
-            SortDataByAsync(new ElectricityMeasurement());
+
+            if(measurementType == null)
+                measurementType = new ElectricityMeasurement();
+            SortDataByAsync(measurementType);
 
             base.OnAppearing();
         }
@@ -42,9 +46,10 @@ namespace SqliteExample.Views
             }
         }
 
-        private  void SortByElectricityButton_Clicked(object sender, System.EventArgs e)
+        private void SortByElectricityButton_Clicked(object sender, System.EventArgs e)
         {
-             SortDataByAsync(new ElectricityMeasurement());
+            measurementType = new ElectricityMeasurement();
+            SortDataByAsync(measurementType);
         }
 
         private void SortDataByAsync(MeasurementType type)
@@ -53,7 +58,7 @@ namespace SqliteExample.Views
             var source = from note in notes
                          where note.Measurement == type
                          orderby note.Date descending
-                         select note;  
+                         select note;
 
             var listData = source.ToList<Note>();
 
@@ -66,14 +71,16 @@ namespace SqliteExample.Views
             collectionView.ItemsSource = listData;
         }
 
-        private  void SortByWaterButton_Clicked(object sender, System.EventArgs e)
+        private void SortByWaterButton_Clicked(object sender, System.EventArgs e)
         {
-            SortDataByAsync(new WaterMeasurement());
+            measurementType = new WaterMeasurement();
+            SortDataByAsync(measurementType);
         }
 
-        private  void SortByGasButton_Clicked(object sender, System.EventArgs e)
+        private void SortByGasButton_Clicked(object sender, System.EventArgs e)
         {
-             SortDataByAsync(new GasMeasurement());
+            measurementType = new GasMeasurement();
+            SortDataByAsync(measurementType);
         }
     }
 }
